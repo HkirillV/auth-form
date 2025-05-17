@@ -1,9 +1,16 @@
 import Router from "@/router";
-import "./styles"
+import Container from "@/components/layouts/Container";
+
+import "./styles";
 
 function App() {
+
   return (
-    <Router />
+    <Container>
+      <main className="content">
+        <Router />
+      </main>
+    </Container>
   );
 }
 
