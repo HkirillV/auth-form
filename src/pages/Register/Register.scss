@@ -1,13 +1,56 @@
+@use "@/styles/abstracts/mixins.scss";
+
 .register {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 400px;
+  padding-inline: 55px;
+  max-width: 390px;
+  height: 600px;
+  border-radius: 10px;
   background-color: var(--c-white);
 
   &__form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+
+  &__title {
+    @include mixins.font-size(30);
+    padding-bottom: 40px;
+  }
+
+  &__label {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    @include mixins.font-size(16);
+    width: 100%;
+    height: 62px;
+    padding-inline: 20px;
+    border-radius: 20px;
+    border: none;
+    color: var(--c-extra-dark);
+    background: transparent;
+    -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__button {
+    @include mixins.font-size(14);
+    padding-inline: 20px;
+    min-width: 160px;
+    height: 48px;
+    border-radius: 25px;
+    border: none;
+    color: var(--c-white);
+    background-color: var(--c-violet);
+    transition: all 0.4s;
+
+    @include mixins.hover {
+      background-color: var(--c-plum);
+    }
   }
 }
