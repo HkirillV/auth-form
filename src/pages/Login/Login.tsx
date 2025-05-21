@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { GrFacebookOption } from "react-icons/gr";
 import Input from "@/components/ui/Input";
 
 import "./Login.scss";
@@ -33,13 +34,25 @@ const Login = () => {
           />
         </label>
       </form>
-      <button className="login__btn" type="submit">
-        Sign In
+      <button className="login__button" type="submit">
+        SIGN IN
       </button>
-      <p>
-        Already have an account yet?
-        <Link to="/register"> Sign Up</Link>
-      </p>
+      <p className="login__sub-title">Or login with</p>
+      <div className="login__social">
+        <a className="login__social-link" href="/">
+          <GrFacebookOption />
+        </a>
+        <a className="login__social-link" href="/">
+          <img
+            src="/src/assets/icons/icon-google.png"
+            width="24"
+            height="24"
+            loading="lazy"
+            alt="icon-google"
+          />
+        </a>
+      </div>
+      <Link className="login__link" to="/register"> Sign Up</Link>
     </div>
   );
 };

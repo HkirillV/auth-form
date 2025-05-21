@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { GrFacebookOption } from "react-icons/gr";
 import Input from "@/components/ui/Input";
 
 import "./Register.scss";
@@ -36,11 +37,22 @@ const Register = () => {
       <button className="register__button" type="submit">
         SIGN UP
       </button>
-      <p>Or login with</p>
-      <p>
-        Already have an account yet?
-        <Link to="/login"> Sign In</Link>
-      </p>
+      <p className="register__sub-title">Or login with</p>
+      <div className="register__social">
+        <a className="register__social-link" href="/">
+          <GrFacebookOption />
+        </a>
+        <a className="register__social-link" href="/">
+          <img
+            src="/src/assets/icons/icon-google.png"
+            width="24"
+            height="24"
+            loading="lazy"
+            alt="icon-google"
+          />
+        </a>
+      </div>
+      <Link className="register__link" to="/login"> Sign In</Link>
     </div>
   );
 };
